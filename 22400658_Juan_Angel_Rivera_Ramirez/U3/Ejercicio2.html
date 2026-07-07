@@ -5,6 +5,8 @@
         <title>Ejercicio 2</title>
         <style>
             body {
+                border: 2px solid #000000;
+                border-radius: 10px;
                 background-color: #2b2a2a;
                 font-family: Times new roman, sans-serif;
                 margin: 20px;
@@ -55,7 +57,34 @@
                 color: rgb(255, 255, 255);   
                 all:unset
             }
-            table
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                font-weight: bold;
+            }
+            th{
+                border: 1px solid #000000;
+                padding: 8px;
+                color: #ffffff;  
+                background-color: #da6200;              
+            }
+            td {
+                border: 1px solid #000000;
+                padding: 8px;
+                font-weight: bold;
+                text-align: left;
+                color: #000000;
+                background-color: #ffa260;                
+            }
+            h2{
+                font-family: times new roman, sans-serif;
+                color: #000000;
+                border: 2px solid #000000;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: #7a7a7a;
+            }
+            
         </style>
     </head>
     <body> 
@@ -175,6 +204,6 @@
                 <li> <a href="https://es.wikipedia.org/wiki/Coldplay" target="_blank" title="Visitar Wikipedia">Wikipedia</a></li>
                 <li> <a href="https://play.google.com/store/apps/details?id=com.sap.coldplay&hl=es&pli=1" target="_blank" title="Visitar Google Play Store">Playstore</a></li>
             </ul>
-        <p>Todos los derechos reservados.</p>
+        <p class="descripcion">Todos los derechos reservados.</p>
     </body>
 </html>
