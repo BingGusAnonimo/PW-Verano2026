@@ -129,13 +129,10 @@ body{
 
 .poster{
     position: relative;
-    width: fit-content;
-    margin: auto;
 }
 
 .poster img{
     width: 100%;
-    border-radius: 8px;
 }
 
 .letrero{
