@@ -283,3 +283,125 @@ footer p{
     color:#8d8d8d;
     font-size:15px;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+
+    .titulo{
+        width: 90%;
+    }
+
+    .correo{
+        width: 90%;
+    }
+
+    .section1 div:last-child img{
+        width: 400px;
+    }
+
+    .section5{
+        padding: 80px 30px;
+    }
+
+    .letrero{
+        font-size: 32px;
+        left: 20px;
+    }
+
+    .section2 h2,
+    .section4 h2,
+    .section5 h2,
+    .section6 h2{
+        font-size: 32px;
+    }
+
+    .fila img{
+        width: 200px;
+    }
+
+    .section4 table,
+    .section4 th,
+    .section4 td{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .btn-inicio{
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .Logo{
+        margin-left: 15px;
+        text-align: center;
+    }
+
+    .Logo img{
+        width: 90px;
+    }
+
+    .titulo,
+    .informacion,
+    .correo{
+        margin-left: 15px;
+    }
+
+    .correo{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .correo button{
+        border-radius: 6px;
+    }
+
+    .section1 div:last-child img{
+        width: 250px;
+    }
+
+    .section3{
+        padding: 30px;
+        gap: 10px;
+    }
+
+    .pelicula{
+        width: 100px;
+    }
+
+    .fila{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fila img{
+        width: 90%;
+    }
+
+    .section4{
+        padding: 30px 15px;
+    }
+
+    .section4 table{
+        font-size: 12px;
+    }
+
+    .section4 th,
+    .section4 td{
+        padding: 8px;
+    }
+
+    .letrero{
+        font-size: 22px;
+    }
+
+}
