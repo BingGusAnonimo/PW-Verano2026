@@ -127,5 +127,76 @@ let dobles =numeros.map(numero => {
     return numero*2;
 });
 console.log(dobles);
-*/
 
+console.log(typeof (10))
+console.log(typeof ("Hola"))
+console.log(typeof (true))
+console.log(typeof ({}))
+
+const edad = 17;
+const mensaje = edad >= 18 ? "Mayor de edad" : "menor de edad";
+console.log(mensaje);
+
+
+const edad = 5;
+const mensaje = edad >= 18 < 50 ? "Mayor de edad" : edad >= 50 ? "Mediana edad" : "menor de edad";
+console.log(mensaje);
+
+// Objetos
+const estudiante = {
+    nombre: "Pedro",
+    edad: 20,
+    direccion: {
+        calle: "calle"
+    }
+}
+console.log(estudiante.nombre)
+console.log(estudiante.nombre ? "Tiene nombre" : "No tiene nombre");
+console.log(estudiante.campo || "sin campo")
+console.log(estudiante.nombre || "sin campo")
+
+let edad = 25;
+edad >= 18 && console.log("Puede entrar");
+
+let alumno = {
+    nombre: "Juan",
+    edad: 20,
+    carrera: "ISC",
+}
+delete alumno.edad // elimina propiedad
+console.log(alumno);
+console.log("nombre" in alumno); // Retorna true/false si existe
+console.log("edad" in alumno);
+
+const numeros = [1, 2, 3, 4, 5];
+
+const copia = [...numeros];
+//delete copia[4];
+const a = [1, 2];
+const b = [3, 4];
+
+console.log(...a);
+console.log(...b);
+console.log(copia);
+console.log(...copia);
+
+const productos = [
+    {nombre: "Laptop", precio: 15000, categoria: "Electronica"},
+    {nombre: "Calular", precio: 2900, categoria: "Telefonia"},
+    {nombre: "TV", precio: 6000, categoria: "Electronica"},
+    {nombre: "Moto", precio: 28000, categoria: "Transporte"},
+]
+//console.log(productos);
+
+const carros = productos.filter(p => p.precio > 25000);
+//console.log(carros); // filtra por precios
+
+const nombres = productos.map(p => p.nombre);
+// console.log(nombres); mapea los elementos y muestra los nombres de los subarreglos
+
+const total = productos.reduce((suma, p) => {
+    return suma + p.precio;
+}, 0);
+console.log("Total: $"+total);
+
+*/
