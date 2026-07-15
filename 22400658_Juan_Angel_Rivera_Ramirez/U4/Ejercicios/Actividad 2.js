@@ -21,7 +21,7 @@ function Ejercicio_1(){
     }
 }
 
-//Ejercicio_1();
+Ejercicio_1();
 
 /*
 2. Escribe un programa que genere de forma continua números entre el 0 y el 5,
@@ -37,7 +37,7 @@ function Ejercicio_2(){
     } while (Aleatorio !== 0);
 }
 
-//Ejercicio_2();
+Ejercicio_2();
 
 
 /*
@@ -55,7 +55,7 @@ function Ejercicio_3(){
     }
 }
 
-//Ejercicio_3();
+Ejercicio_3();
 
 /*
 4. Escribe un programa que solicite 10 números entre el 1 y el 100, 
@@ -81,7 +81,7 @@ function Ejercicio_4(){
     console.log("Total de Impares: ", imp);
 }
 
-//Ejercicio_4();
+Ejercicio_4();
 
 
 /*
@@ -95,24 +95,20 @@ en ventas para un empleado, y muestre en pantalla cuánto dinero va a
 recibir por comisión.
 */
 
-function Ejercicio_5(){
+function Ejercicio_5() {
     let ventas;
 
     do {
-        ventas = Number(prompt(
-            "Ingresa las ventas del empleado ($5,000 - $30,000):"));
-    } while (isNaN(ventas) || ventas < 5000 || ventas > 30000);
+        ventas = Number(prompt("Ingresa las ventas ($5000 - $30000):"));
+    } while (ventas < 5000 || ventas > 30000 || isNaN(ventas));
 
-    let comision;
-
-    if (ventas < 10000) {
-        comision = ventas * 0.10;
+    if (ventas >= 10000) {
+        console.log("Comisión *0.15: $" + (ventas * 0.15));
     } else {
-        comision = ventas * 0.15;
+        console.log("Comisión: *0.10$" + (ventas * 0.10));
     }
-
-    console.log("Ventas: $" + ventas);
-    console.log("Comisión: $" + comision);
 }
 
 Ejercicio_5();
+
+/* Pruebas */
