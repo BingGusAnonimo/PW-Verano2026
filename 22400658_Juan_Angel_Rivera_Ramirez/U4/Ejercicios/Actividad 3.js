@@ -120,7 +120,7 @@ function Ejercicio_4() {
 
     while (contador <= 7) {
         intento = Number(prompt("Intento " + contador
-            + ", adivina el número del 1 al 100 " + num));
+            + ", adivina el número del 1 al 100 "));
 
         if (intento == num) {
             console.log("Adivinaste en el intento: " + contador);
@@ -136,7 +136,8 @@ function Ejercicio_4() {
     }
 }
 
-Ejercicio_4();
+//Ejercicio_4();
+
 /*
 5.- Crea un programa que simule el registro de ventas de una tienda. Cada venta debe contener
 el nombre del vendedor, el nombre del producto, la cantidad vendida y el precio unitario. El
