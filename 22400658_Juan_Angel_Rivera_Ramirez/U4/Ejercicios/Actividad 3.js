@@ -120,26 +120,103 @@ function Ejercicio_4() {
 
     while (contador <= 7) {
         intento = Number(prompt("Intento " + contador
-            + ", adivina el número del 1 al 100"));
+            + ", adivina el número del 1 al 100 "));
 
         if (intento == num) {
-            console.log("Adivinaste el número al intento: " + contador);
-            break;
+            
         }   
-
-        if (intento < num) {
-            console.log("Es más grande el número");
-        }
-        else {
-            console.log("Es más pequeño el número");
-        }
-
-        contador = contador + 1;
-
-        if (contador == 8) {
-            console.log("Perdiste, el número es: " + num);
-        }
-    }   
+    } 
 }
 
-// Ejercicio_4();
+/*
+5.- Crea un programa que simule el registro de ventas de una tienda. Cada venta debe contener
+el nombre del vendedor, el nombre del producto, la cantidad vendida y el precio unitario. El
+programa debe permitir registrar múltiples ventas (solicitándolos mediante prompt()) y al
+finalizar debe mostrar en consola el total de ventas realizadas, el total de ingresos generados,
+cuántas unidades se vendieron de cada producto y cuál fue el vendedor que generó el mayor
+monto en ventas. 
+
+El ejercicio debe aplicar ciclos, arreglos, objetos, condicionales y usar
+métodos como .push(),.map(),.forEach() o.reduce().
+
+Total de ventas realizadas: 6
+Total de ingresos: $15,700.00
+Unidades vendidas por producto:
+•
+Laptop: 3 unidades
+Mouse: 5 unidades
+. Teclado: 2 unidades
+Vendedor con más ventas: Carla ($8000)
+*/
+
+function Ejercicio_5() {
+
+    let ventas = [];
+    let totalVentas = Number(prompt("¿Cuántas ventas vas a registrar?"));
+
+    for (let i = 0; i < totalVentas; i++) {
+
+        let vendedor = prompt("Nombre del vendedor:");
+        let producto = prompt("Nombre del producto:");
+        let cantidad = Number(prompt("Cantidad vendida:"));
+        let precio = Number(prompt("Precio unitario:"));
+
+        let venta = {
+            vendedor: vendedor,
+            producto: producto,
+            cantidad: cantidad,
+            precio: precio
+        };
+
+        ventas.push(venta);
+    }
+
+    console.log("Total de ventas realizadas: " + ventas.length);
+
+    let ingresos = 0;
+
+    let productos = {};
+    let vendedores = {};
+
+    ventas.forEach(function (venta) {
+
+        ingresos = ingresos + (venta.cantidad * venta.precio);
+
+        if (productos[venta.producto]) {
+            productos[venta.producto] += venta.cantidad;
+        } else {
+            productos[venta.producto] = venta.cantidad;
+        }
+
+        if (vendedores[venta.vendedor]) {
+            vendedores[venta.vendedor] += venta.cantidad * venta.precio;
+        } else {
+            vendedores[venta.vendedor] = venta.cantidad * venta.precio;
+        }
+
+    });
+
+    console.log("Total de ingresos: $" + ingresos);
+
+    console.log("Unidades vendidas por producto:");
+
+    for (let producto in productos) {
+        console.log(producto + ": " + productos[producto] + " unidades");
+    }
+
+    let mejorVendedor = "";
+    let mayorVenta = 0;
+
+    for (let vendedor in vendedores) {
+
+        if (vendedores[vendedor] > mayorVenta) {
+            mayorVenta = vendedores[vendedor];
+            mejorVendedor = vendedor;
+        }
+
+    }
+
+    console.log("Vendedor con más ventas: " + mejorVendedor + " ($" + mayorVenta + ")");
+}
+
+Ejercicio_5();
