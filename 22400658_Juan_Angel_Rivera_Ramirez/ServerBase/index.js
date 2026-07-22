@@ -75,26 +75,27 @@ app.get("/calculadora/:operacion/:a/:b", (req,res) => {
         case "multiplicacion":
         res.send(resultado = a*b);
         break;
-    }
 
-    /*
-    if (operacion = "suma" || ){
-        
-    }
-    
-    else if (operacion = "resta"){
-        res.send(resultado = a-b);
-    }
-    /*
-    if (operacion = "multiplicacion"){
-        res.send(resultado = a*b);
-    }
-    if (operacion = "división"){
+        case "división":
         res.send(resultado = a/b);
+        break;
     }
-    */
-
 });
 
+/*
+Ejercicio 5. Calificación
+*/
 
+app.get("/calificacion/:nota", (req, res) => {
+    let nota = Number(req.params.nota);
 
+    if (nota >= 90) {
+        res.send("Excelente");
+    } else if (nota >= 80) {
+        res.send("Muy bien");
+    } else if (nota >= 70) {
+        res.send("Aprobado");
+    } else {
+        res.send("Reprobado");
+    }
+});
